@@ -9,6 +9,7 @@ import 'package:retry/retry.dart';
 import 'package:http/http.dart' as http;
 
 class CourseRepository implements Repository {
+  // firebase fuctions api is used for login
   final firebaseUrl = 'us-central1-chatapp-e97a6.cloudfunctions.net';
   final courseUrl = 'fakestoreapi.com';
   final _login = '/TODO/login';

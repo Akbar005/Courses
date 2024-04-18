@@ -92,6 +92,7 @@ class CourseCard extends StatelessWidget {
         size: 20,
       );
     } else if (index > rating - 1 && index < rating) {
+      // if the value is in decimals half star is given
       icon = const Icon(
         Icons.star_half,
         color: Color(0xffF6E6A5),

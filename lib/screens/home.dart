@@ -73,6 +73,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Consumer<HomeProvider>(builder: (context, homeProvider, child) {
+      // if search length is less then 2 characters search is not exicuted
       if (_srchTextEditingController.text.length < 2) {
         crsList = homeProvider.crsList;
       }
@@ -150,6 +151,7 @@ class _HomeState extends State<Home> {
     });
   }
 
+  // On search filtering of data
   onChanged(HomeProvider homeProvider, String txt) {
     crsList = [];
     crsList = homeProvider.crsList

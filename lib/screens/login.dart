@@ -35,6 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   getData() async {
     _pref = await SharedPreferences.getInstance();
+    // if user is not logged out, he is redirected to home page
     if (_pref.getString("userId") != null) {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Home()));
@@ -183,9 +184,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 const Text("Do you have an account?"),
                 TextButton(
-                    onPressed: () async {
-                      // context.go('/signUp');
-                    },
+                    onPressed: () async {},
                     child: const Text(
                       "Sign Up",
                       style: TextStyle(color: Colors.black),
